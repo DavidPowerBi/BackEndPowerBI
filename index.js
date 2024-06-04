@@ -1,4 +1,5 @@
 const express = require("express");
+const config = require("./config/config");
 //const bodyParser = require("body-parser");
 //const exphbs = require("express-handlebars");
 const sequelize = require("./config/database");
