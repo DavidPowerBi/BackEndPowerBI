@@ -1,16 +1,21 @@
 const { Sequelize, DataTypes } = require("sequelize");
+//const Sequelize = require("sequelize");
 const sequelize = require("../config/database");
-
+//const OS = database.define()
 const OS = sequelize.define(
   "os_preventivas",
   {
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+    },
     OS: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
     },
     SETOR: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     PERIODO: {
@@ -18,21 +23,23 @@ const OS = sequelize.define(
       allowNull: false,
     },
     EQUIPAMENTOS: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     ESTADO: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     TIPO_EQUIP: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
     },
   },
   {
     timestamps: false,
     tableName: "os_preventivas",
+    sequelize,
+    modelname: "os",
   },
 );
 
