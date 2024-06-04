@@ -19,7 +19,7 @@ try {
 
 //ROTA PRINCIPAL
 app.use("/", osRoutes);
-app.listen(3000);
+app.listen(8080);
 
 // const app = express();
 
